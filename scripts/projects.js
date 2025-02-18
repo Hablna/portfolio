@@ -11,9 +11,9 @@ const projects = [
     },
     {
         title: "C# Unity Projects",
-        description: "It's a game project that I made using Unity and C#.<br>It's a simple game where you have to avoid obstacles and collect coins.",
-        url: "https://github.com/hablna/ScriptBash",
-        image: "../assets/bash.png"
+        description: "It's a game project that I made using Unity and C#.<br>It's a simple game where you have to escape from guardians.",
+        url: "https://github.com/hablna/SthealthGame",
+        image: "../assets/sthealthGame.png"
     },
 
 
