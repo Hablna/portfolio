@@ -7,7 +7,7 @@ const projects = [
         title: "Advent of Code",
         description: "This is a collection of my solutions to <a href='https://adventofcode.com/'>the Advent of Code</a> challenges.<br>It's a challenge that takes place every year in December, where you have to solve a series of puzzles with your choice language.",
         url: "https://github.com/hablna/advent_of_code",
-        image: "../assets/aoc.png"
+        image: "../assets/AOC.png"
     },
     {
         title: "C# Unity Projects",
@@ -50,6 +50,7 @@ function createProjectTiles() {
                 `;
         const thumbnail = tile.querySelector('.project-thumbnail');
         thumbnail.addEventListener('click', () => window.open(project.url, '_blank'));
+        const projectsContainer = document.querySelector('#projects .grid');
         projectsContainer.appendChild(tile);
     });
     lucide.createIcons();
