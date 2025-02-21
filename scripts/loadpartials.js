@@ -11,6 +11,6 @@ function loadpartials(id, file){
 loadpartials('hero', 'hero.html');
 loadpartials('about', 'about.html');
 loadpartials('navigations', 'navigations.html');
-loadpartials('projects', 'projects.html');
+//loadpartials('projects', 'projects.html'); son chargement est lourd;
 loadpartials('skills', 'skills.html');
 loadpartials('experiences', 'experiences.html');
