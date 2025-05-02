@@ -2,8 +2,6 @@
 
 const projects = [
     {
-        // Dans cette section, je peux faire une barre dans laquelle on retrouve "hobbies", "proffessionnele", "tous"...
-        //TODO: Projet Advent of Code; projet en c# unity; peut être mon random project; projet open innov
         title: "Advent of Code",
         description: "This is a collection of my solutions to <a href='https://adventofcode.com/'>the Advent of Code</a> challenges.<br>It's a challenge that takes place every year in December, where you have to solve a series of puzzles with your choice language.",
         url: "https://github.com/hablna/advent_of_code",
@@ -15,6 +13,12 @@ const projects = [
         url: "https://github.com/hablna/SthealthGame",
         image: "../assets/sthealthGame.png"
     },
+    {
+        title: "Francine Vousse",
+        description: "It's a website made by with PHP Symfony and mysql. It's an application that allow to create covoiturage between users.<br>It's a project that I made alone for my BTS.",
+        url: "https://github.com/Hablna/Francine-Vousse",
+        image: "../assets/francine.png"
+    }
 
 
 ];

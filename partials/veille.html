@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="../assets/dp.jpg" type="image/jpeg">
+    <title>Veille</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+<div class="max-w-7xl mx-auto py-10 px-4">
+    <h1 class="text-3xl font-bold mb-8 text-center text-blue-600">Veille Technologique</h1>
+
+    <div id="feed" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Articles injectés ici -->
+    </div>
+</div>
+
+<script>
+    const feedContainer = document.getElementById("feed");
+    const rssFeeds = [
+        "https://api.rss2json.com/v1/api.json?rss_url=https://www.infoq.com/feed/",
+    ];
+
+    rssFeeds.forEach(feedUrl => {
+        fetch(feedUrl)
+            .then(res => res.json())
+            .then(data => {
+                data.items.slice(0, 6).forEach(item => {
+                    const article = document.createElement("div");
+                    article.className = "bg-white p-4 rounded-xl shadow hover:shadow-lg transition";
+
+                    article.innerHTML = `
+              <h2 class="text-lg font-semibold text-gray-800 mb-1">${item.title}</h2>
+              <p class="text-sm text-gray-500 mb-2">${new Date(item.pubDate).toLocaleDateString()}</p>
+              <p class="text-gray-700 text-sm line-clamp-3">${item.description}</p>
+              <a href="${item.link}" target="_blank" class="text-blue-500 font-semibold mt-3 inline-block">Lire l'article →</a>
+            `;
+
+                    feedContainer.appendChild(article);
+                });
+            })
+            .catch(error => {
+                console.error("Erreur de chargement RSS :", error);
+            });
+    });
+</script>
+</body>
+</html>
