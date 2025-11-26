@@ -2,6 +2,12 @@
 
 const projects = [
     {
+        title: "Ansari School",
+        description: "Plateforme éducative que j'ai conçue pour Ansari School. Responsive, avec des parcours clairs pour les élèves et une vitrine lumineuse pour l'établissement.",
+        url: "https://ansari-school.com/",
+        image: "../assets/ansari-logo.svg"
+    },
+    {
         title: "Advent of Code",
         description: "This is a collection of my solutions to <a href='https://adventofcode.com/'>the Advent of Code</a> challenges.<br>It's a challenge that takes place every year in December, where you have to solve a series of puzzles with your choice language.",
         url: "https://github.com/hablna/advent_of_code",

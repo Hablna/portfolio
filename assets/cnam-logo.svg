@@ -1,0 +1,14 @@
+<svg width="320" height="180" viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Logo CNAM</title>
+  <desc id="desc">Logotype rouge du CNAM stylisé pour le portfolio.</desc>
+  <defs>
+    <linearGradient id="cnamGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c0002a"/>
+      <stop offset="100%" stop-color="#ff2f59"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" rx="24" fill="#fef6f8"/>
+  <rect x="28" y="42" width="264" height="96" rx="20" fill="url(#cnamGradient)"/>
+  <text x="60" y="110" font-family="'Inter','Segoe UI',sans-serif" font-size="64" font-weight="700" fill="#fff">CNAM</text>
+  <text x="62" y="138" font-family="'Space Mono',monospace" font-size="16" fill="#ffd9e5" letter-spacing="2">Pays de la Loire</text>
+</svg>
