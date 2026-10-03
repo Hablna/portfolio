@@ -1,0 +1,38 @@
+# Stack du reverse-proxy partagé du VPS.
+# À déposer dans /opt/proxy/docker-compose.yml
+# Réutilise les volumes Caddy existants : les certificats déjà émis sont conservés.
+#
+# Le dossier ./conf est monté, et non le Caddyfile seul : un bind mount de
+# fichier est lié à un inode, donc un mv/sed -i du Caddyfile serait invisible
+# pour le conteneur (« config is unchanged » au reload). Avec un dossier,
+# docker exec proxy_caddy caddy reload --config /etc/caddy/Caddyfile suffit.
+services:
+  caddy:
+    image: caddy:2
+    container_name: proxy_caddy
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./conf:/etc/caddy:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    networks:
+      - web
+      - ansari
+
+networks:
+  web:
+    external: true
+  ansari:
+    name: gestionansari-school_default
+    external: true
+
+volumes:
+  caddy_data:
+    name: gestionansari-school_caddy_donnees
+    external: true
+  caddy_config:
+    name: gestionansari-school_caddy_config
+    external: true

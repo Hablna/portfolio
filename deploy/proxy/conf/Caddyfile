@@ -1,0 +1,17 @@
+# Reverse-proxy partagé du VPS — HTTPS automatique (Let's Encrypt).
+# À déposer dans /opt/proxy/conf/Caddyfile sur le VPS.
+# Après modification : docker exec proxy_caddy caddy reload --config /etc/caddy/Caddyfile
+
+gestion.ansari-school.com {
+    encode gzip
+    reverse_proxy app:8080
+}
+
+habl.me {
+    encode gzip zstd
+    reverse_proxy habl_portfolio:80
+}
+
+www.habl.me {
+    redir https://habl.me{uri} permanent
+}
