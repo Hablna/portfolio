@@ -14,3 +14,4 @@ loadpartials('navigations', 'navigations.html');
 //loadpartials('projects', 'projects.html'); son chargement est lourd;
 loadpartials('skills', 'skills.html');
 loadpartials('experiences', 'experiences.html');
+loadpartials('contact', 'contact.html');

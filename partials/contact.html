@@ -1,0 +1,47 @@
+<!--contact section-->
+<section id="contact-section" class="section py-20 bg-gray-100 dark:bg-gray-900">
+    <div class="container mx-auto px-4 max-w-2xl">
+        <h2 class="text-3xl font-bold mb-4 text-center font-space-mono">Contact me</h2>
+        <p class="text-center text-gray-600 dark:text-gray-400 mb-10 font-space-mono text-sm">
+            Une question, une opportunité ? Laissez-moi un message, je vous réponds rapidement.
+        </p>
+
+        <form id="contactForm" class="bg-white/70 dark:bg-gray-800/60 p-8 rounded-3xl shadow-xl space-y-5" novalidate>
+            <!-- Anti-spam : champ invisible que seuls les robots remplissent -->
+            <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off">
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <label class="block">
+                    <span class="text-sm font-semibold">Nom</span>
+                    <input type="text" name="name" required maxlength="100" autocomplete="name"
+                           class="contact-input mt-1" placeholder="Votre nom">
+                </label>
+                <label class="block">
+                    <span class="text-sm font-semibold">Email</span>
+                    <input type="email" name="email" required maxlength="150" autocomplete="email"
+                           class="contact-input mt-1" placeholder="vous@exemple.com">
+                </label>
+            </div>
+
+            <label class="block">
+                <span class="text-sm font-semibold">Sujet</span>
+                <input type="text" name="subject_user" maxlength="150"
+                       class="contact-input mt-1" placeholder="Objet de votre message">
+            </label>
+
+            <label class="block">
+                <span class="text-sm font-semibold">Message</span>
+                <textarea name="message" required rows="5" maxlength="5000"
+                          class="contact-input mt-1 resize-y" placeholder="Votre message…"></textarea>
+            </label>
+
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p id="contactStatus" class="text-sm font-space-mono" role="status" aria-live="polite"></p>
+                <button type="submit" id="contactSubmit" class="button button-outlined flex items-center space-x-2">
+                    <span>Envoyer</span>
+                    <i data-lucide="send" class="w-5 h-5"></i>
+                </button>
+            </div>
+        </form>
+    </div>
+</section>

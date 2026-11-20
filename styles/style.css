@@ -303,3 +303,26 @@
 @media (min-width: 768px) {
     :root { --gh-cell: 12px; }
 }
+
+/* Formulaire de contact */
+.contact-input {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 12px;
+    border: 1px solid #d1d5db;
+    background-color: #ffffff;
+    color: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.dark .contact-input {
+    border-color: #4b5563;
+    background-color: #111827;
+}
+.contact-input:focus {
+    outline: none;
+    border-color: #007AFF;
+    box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.25);
+}
+html {
+    scroll-behavior: smooth;
+}
