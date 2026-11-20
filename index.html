@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Habib - Portfolio</title>
-    <link rel="icon" href="assets/dp.jpg" type="image/jpeg">
+    <link rel="icon" href="assets/dp.png" type="image/jpeg">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="styles/style.css">
@@ -39,6 +39,23 @@
             </div>
         </div>
     </section>
+    <!-- GitHub contributions Section -->
+    <section id="github" class="section py-16">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-3xl font-bold mb-8 text-center font-space-mono">GitHub activity</h2>
+            <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                <div id="github-calendar" class="text-sm text-gray-500 dark:text-gray-400">Chargement des contributions…</div>
+                <div class="flex flex-wrap items-center justify-between gap-4 mt-4 text-xs font-space-mono text-gray-600 dark:text-gray-400">
+                    <a href="https://github.com/hablna" target="_blank" rel="noopener" id="github-total" class="underline">@hablna sur GitHub</a>
+                    <div class="flex items-center gap-1">
+                        <span>Moins</span>
+                        <span class="gh-cell gh-l0"></span><span class="gh-cell gh-l1"></span><span class="gh-cell gh-l2"></span><span class="gh-cell gh-l3"></span><span class="gh-cell gh-l4"></span>
+                        <span>Plus</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- experiences Section -->
     <div id="experiences"></div>
 </main>
@@ -56,4 +73,5 @@
 </footer>
 <script src="scripts/main.js"></script>
 <script src="scripts/projects.js"></script>
+<script src="scripts/github.js"></script>
 </html>

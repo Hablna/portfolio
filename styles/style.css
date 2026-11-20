@@ -250,3 +250,56 @@
 .dark .repo-action:hover {
     color: #e2e8f0;
 }
+/* ---- Grille de contributions GitHub ---- */
+:root {
+    --gh-cell: 11px;
+    --gh-gap: 3px;
+    --gh-l0: #ebedf0;
+    --gh-l1: #fed7aa;
+    --gh-l2: #fdba74;
+    --gh-l3: #f97316;
+    --gh-l4: #c2410c;
+}
+.dark {
+    --gh-l0: #2d333b;
+    --gh-l1: #7c2d12;
+    --gh-l2: #c2410c;
+    --gh-l3: #f97316;
+    --gh-l4: #fdba74;
+}
+.gh-scroll {
+    overflow-x: auto;
+    padding-bottom: 4px;
+}
+.gh-months,
+.gh-grid {
+    display: grid;
+    gap: var(--gh-gap);
+    width: max-content;
+    margin: 0 auto;
+}
+.gh-months {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    margin-bottom: 4px;
+    white-space: nowrap;
+}
+.gh-grid {
+    grid-template-rows: repeat(7, var(--gh-cell));
+    grid-auto-flow: column;
+}
+.gh-cell {
+    display: inline-block;
+    width: var(--gh-cell);
+    height: var(--gh-cell);
+    border-radius: 2px;
+    background: var(--gh-l0);
+}
+.gh-empty { background: transparent; }
+.gh-l1 { background: var(--gh-l1); }
+.gh-l2 { background: var(--gh-l2); }
+.gh-l3 { background: var(--gh-l3); }
+.gh-l4 { background: var(--gh-l4); }
+@media (min-width: 768px) {
+    :root { --gh-cell: 12px; }
+}
